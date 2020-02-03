@@ -1,0 +1,19 @@
+@startuml
+
+class EmployeeService{
+    +employeeRepository
+    +void addEmployee(Employee)
+}
+
+interface EmployeeRepository {
+    +void save(Employee)
+}
+
+class EmployeeRepositoryImpl {
+    +void save(Employee)
+}
+
+EmployeeService  *--right EmployeeRepository
+EmployeeRepository <|--down EmployeeRepositoryImpl
+
+@enduml

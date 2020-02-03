@@ -1,0 +1,21 @@
+@startuml
+
+class Employee {
+  +name
+  +email
+  +workLogs
+}
+
+class WorkLog{
+   +date
+   +duration
+}
+
+class WorkManager{
+     +void printWorkSheet(Employee)
+}
+
+Employee  *-down-   WorkLog
+Employee <|--left WorkManager
+
+@enduml

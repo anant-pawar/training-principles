@@ -1,0 +1,39 @@
+@startuml
+
+class Order {
+  +products
+  +shipping
+  +void setShippingType(shipping)
+
+}
+
+class Product{
+   +id
+   +name
+   +price
+}
+
+enum ShippingType{
+   Ground,
+   AIR
+}
+
+interface Shipping{
+    +double getShippingCost()
+}
+
+class AirShipping{
+    +double getShippingCost()
+}
+
+class GroundShipping{
+    +double getShippingCost()
+}
+
+Shipping <|..down AirShipping
+Shipping <|..down GroundShipping
+Order  *-down-   ShippingType
+Order  *-down-  Product
+Order  *-down-  Shipping
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+
+
+
+interface PrinterScanner{
+    +void print(Document)
+    +void scan(Document)
+}
+
+
+
+class SimplePrinter {
+    +void print(Document)
+    +void scan(Document)
+
+}
+note right: scan not implemented
+
+class SimplePrinterScanner {
+    +void print(Document)
+    +void scan(Document)
+}
+PrinterScanner <|..down SimplePrinter
+PrinterScanner <|..down SimplePrinterScanner
+
+
+@enduml
