@@ -1,4 +1,4 @@
-package com.training.LSP;
+package com.training.LSP.bad;
 
 public class LSPDemo {
 

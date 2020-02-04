@@ -1,11 +1,8 @@
-package com.training.LSP;
+package com.training.LSP.good;
 
-class Rectangle {
+class Rectangle implements  Shape{
     private int height;
     private int width;
-
-    public Rectangle() {
-    }
 
     public Rectangle(int height, int width) {
         this.height = height;
@@ -28,12 +25,10 @@ class Rectangle {
         this.width = width;
     }
 
+    @Override
     public int getArea() {
         return width * height;
     }
 
-    @Override
-    public String toString() {
-        return " Width : " + this.width + " Height : " + this.height;
-    }
+
 }

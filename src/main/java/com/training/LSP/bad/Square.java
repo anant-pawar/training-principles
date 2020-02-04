@@ -1,4 +1,4 @@
-package com.training.LSP;
+package com.training.LSP.bad;
 
 class Square extends Rectangle {
     public Square() {
