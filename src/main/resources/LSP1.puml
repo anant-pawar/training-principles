@@ -1,0 +1,16 @@
+@startuml
+
+class Rectangle{
+    +setWidth(width)
+    +setHeight(heigth)
+    +Integer getArea()
+}
+
+class Square {
+    +setWidth(width)
+    +setHeight(heigth)
+}
+
+Rectangle <|--down Square
+
+@enduml
